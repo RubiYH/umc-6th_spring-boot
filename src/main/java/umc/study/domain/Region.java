@@ -18,8 +18,7 @@ public class Region extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20)
+    @Column(columnDefinition = "VARCHAR(20)")
     private String name;
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)

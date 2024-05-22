@@ -18,10 +18,9 @@ public class FoodCategory extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 15)
+    @Column(columnDefinition = "VARCHAR(15)")
     private String name;
 
-    @OneToMany(mappedBy = "food_category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "foodCategory", cascade = CascadeType.ALL)
     private List<MemberPrefer> memberPreferList = new ArrayList<>();
 }
