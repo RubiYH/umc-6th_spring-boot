@@ -1,8 +1,9 @@
 package umc.study.domain;
+
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.extern.java.Log;
 import umc.study.domain.common.BaseEntity;
-import umc.study.domain.mapping.MemberMission;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,6 @@ public class Region extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "VARCHAR(20)")
     private String name;
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)

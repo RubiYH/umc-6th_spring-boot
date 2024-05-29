@@ -2,16 +2,18 @@ package umc.study.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 import umc.study.domain.common.BaseEntity;
 import umc.study.domain.enums.Gender;
-import umc.study.domain.enums.MemberStatus;
 import umc.study.domain.enums.SocialType;
+import umc.study.domain.enums.MemberStatus;
 import umc.study.domain.mapping.MemberAgree;
 import umc.study.domain.mapping.MemberMission;
 import umc.study.domain.mapping.MemberPrefer;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter

@@ -7,6 +7,7 @@ import umc.study.domain.Mission;
 import umc.study.domain.common.BaseEntity;
 import umc.study.domain.enums.MissionStatus;
 
+
 @Entity
 @Getter
 @Builder
