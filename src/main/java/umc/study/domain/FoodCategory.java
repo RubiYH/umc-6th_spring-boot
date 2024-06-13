@@ -1,8 +1,14 @@
 package umc.study.domain;
 
-import jakarta.persistence.*;
 import lombok.*;
 import umc.study.domain.common.BaseEntity;
+import umc.study.domain.mapping.MemberPrefer;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.util.List;
 
 @Entity
 @Getter
@@ -16,6 +22,4 @@ public class FoodCategory extends BaseEntity {
     private Long id;
 
     private String name;
-
-
 }

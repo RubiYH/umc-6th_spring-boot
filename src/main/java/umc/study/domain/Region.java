@@ -1,10 +1,10 @@
 package umc.study.domain;
 
-import jakarta.persistence.*;
 import lombok.*;
 import lombok.extern.java.Log;
 import umc.study.domain.common.BaseEntity;
 
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,4 +23,10 @@ public class Region extends BaseEntity {
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)
     private List<Store> storeList = new ArrayList<>();
+
+    public void setStore(Store store){
+        if (this.id != null)
+            storeList.remove(store);
+        this.storeList.add(store);
+    }
 }
